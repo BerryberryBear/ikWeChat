@@ -6,7 +6,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         linearLayout3.setOnClickListener(this);
         linearLayout4.setOnClickListener(this);
 
+        Log.d("yun", "onCreate:MainActivity");
 
     }
 
@@ -88,5 +91,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .hide(fragment3)
                 .hide(fragment4);
         transaction.commit();
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("yun","Onstart:MainActivity");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("yun","Onrestart:MainActivity");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("yun","Onresume:MainActivity");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("yun","Ondestroy:MainActivity");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("yun","Onpause:MainActivity");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("yun","Onstop:MainActivity");
     }
 }
