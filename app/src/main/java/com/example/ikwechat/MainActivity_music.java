@@ -46,7 +46,6 @@ public class MainActivity_music extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     if(result.getResultCode()==25){
 
-                        Log.d("xr","onActivityResult 有返回值。。。");
                         TextView textView_like=findViewById(R.id.textView_like);
                         textView_like.setText(result.getData().getStringExtra("like"));
                         TextView textView_collection=findViewById(R.id.textView_collect);
